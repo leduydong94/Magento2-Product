@@ -1,0 +1,39 @@
+<?php
+$posts = $block->GetSpecial();
+//var_dump($posts->getData());
+//$skues = [];
+//foreach ($posts as $post)
+//{
+//    $skues[] = $post->getData('sku');
+//}
+//var_dump($skues);
+//$products = [];
+//foreach ($skues as $sku)
+//{
+//    $products[] = $block->getProductBySku($sku)->getName();
+//}
+//var_dump($products);
+?>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+<table>
+    <tr>
+        <th>Entity ID</th>
+        <th>Name</th>
+        <th>SKU</th>
+    </tr>
+    <?php foreach ($posts as $post){ ?>
+    <tr>
+            <td><?= $post->getData('entity_id') ?></td>
+            <td><?= $block->getProductBySku($post->getData('sku'))->getName() ?></td>
+            <td><?= $post->getData('sku') ?></td>
+    </tr>
+    <?php } ?>
+</table>
+
+
+

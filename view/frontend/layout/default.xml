@@ -1,0 +1,10 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="newsletter_head_components">
+            <block class="Magento\Framework\View\Element\Js\Components" name="ajax_newsletter_subscription"
+                   template="Product_SampleAttribute::ajax-newsletter-subscription.phtml"/>
+        </referenceBlock>
+<!--        <referenceBlock name="product.info.options.wrapper.bottom" remove="true"/>-->
+    </body>
+</page>

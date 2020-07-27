@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Checkout\Model\Cart">
+        <plugin name="change_add_to_cart"
+                type="Product\SampleAttribute\Plugin\Model\Checkout\Cart\Plugin"
+                sortOrder="1" />
+    </type>
+    <preference for="Magento\Newsletter\Controller\Subscriber\NewAction"
+                type="Product\SampleAttribute\Override\Newsletter\Controller\Subscriber\NewAction" />
+<!--    <type name="Magento\Catalog\Model\Product">-->
+<!--        <plugin name="afterProductName" type="Product\SampleAttribute\Plugin\Catalog\Product"/>-->
+<!--    </type>-->
+</config>
+
